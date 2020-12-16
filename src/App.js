@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import './css/main.css'
+import Logo from './img/tsu_logo.svg'
 
 function App() {
+
+  const [width, setWidth] = useState(window.innerWidth)
+  const [height, setHeight] = useState(window.innerHeight)
+
+  window.addEventListener("orientationchange", function() {
+    setWidth(window.innerWidth)
+    setHeight(window.innerHeight)
+    console.log()
+}, false);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="root" style={{height: window.innerHeight, width: window.innerWidth}}>
+      <p>123456</p>
+      <img alt = "logo" src={Logo}></img>
+      <p>123456</p>
+      <p>123456</p>
+      <p>123456</p>
+      <p>123456</p>
+      <p>123456</p>
+      <p>123456</p>
+      <p>123456</p>
+      <p>123456</p>
+      <p>123456</p>
     </div>
   );
 }
 
 export default App;
+
