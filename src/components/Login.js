@@ -1,7 +1,10 @@
 import TSU_Logo from '../img/tsu_logo.svg'
-
+import styles from './login.css'
 
 export default function Login(){
+
+    console.log(styles)
+
     return(
         <div className = "wrapper">
             <div className = "login-container">

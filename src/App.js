@@ -1,32 +1,27 @@
 import { useState } from 'react';
 import './css/main.css'
-import Logo from './img/tsu_logo.svg'
+// import Logo from './img/tsu_logo.svg'
+import Login from './components/Login'
 
 function App() {
 
   const [width, setWidth] = useState(window.innerWidth)
   const [height, setHeight] = useState(window.innerHeight)
 
-  window.addEventListener("orientationchange", function() {
-    setWidth(window.innerWidth)
-    setHeight(window.innerHeight)
-    console.log()
-}, false);
+  window.addEventListener("orientationchange", function () {
+    if (window.orientation === 0) {
+      setWidth(window.innerWidth)
+      setHeight(window.innerHeight)
+    } else {
+      setWidth(window.innerWidth)
+      setHeight(window.innerWidth)
+    }
+  }, false);
 
 
   return (
-    <div className="root" style={{height: window.innerHeight, width: window.innerWidth}}>
-      <p>123456</p>
-      <img alt = "logo" src={Logo}></img>
-      <p>123456</p>
-      <p>123456</p>
-      <p>123456</p>
-      <p>123456</p>
-      <p>123456</p>
-      <p>123456</p>
-      <p>123456</p>
-      <p>123456</p>
-      <p>123456</p>
+    <div className="root" style={{ height: height, width: width }}>
+      <Login/>
     </div>
   );
 }
