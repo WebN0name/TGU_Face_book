@@ -5,7 +5,7 @@ import { faCheck, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 export default function UserForm() {
     return (
         <div className="userFormContainer">
-            <ArrowBack />
+            <ArrowBack link={"/PasportForm"} />
             <div className="userFormContent">
                 <h1>Заполните <br /> анкету</h1>
                 <p>Шаг 1 из 2</p>

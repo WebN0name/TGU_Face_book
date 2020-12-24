@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import UserForm from './screens/UserForm'
 import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom'
+import PasportForm from './screens/PasportForm';
 
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
       <div className = "wrapper">
         <Router>
           <Switch>
-            <Route path="/" component={UserForm} />
+            <Route path="/" component={PasportForm} />
+            <Route path="/PasportForm" component={PasportForm}/> 
           </Switch>
         </Router>
       </div>

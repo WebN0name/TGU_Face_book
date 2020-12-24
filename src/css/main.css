@@ -132,3 +132,22 @@
     background-color: #247ABF;
     margin-right: 22px;
 }
+input[type="text"]{
+    width: 340px;
+    height: 60px;
+    border-radius: 26px 26px 5px 26px;
+    outline: 0;
+    border:0;
+    background-color: #DBDBDB;
+    color: black;
+}
+
+.InputText{
+    padding-left: 17px;
+}
+
+.HeadInfo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
